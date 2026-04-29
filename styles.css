@@ -252,4 +252,15 @@ h1{
     }
 }
 
-    
+    footer{
+        background-color: #547071;
+    }
+
+    footer a{
+        color: #fff;
+    }
+
+    footer ul{
+        display: flex;
+        justify-content: space-around;
+    }
