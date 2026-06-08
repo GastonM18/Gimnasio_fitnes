@@ -1,105 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYM FITNES</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="font/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="styles.css">
+
 
 </head>
+
 <body>
-    
-    <header class="header">
-
-        <input type="checkbox" id="open-menu" class="header_checkbox">
-        <label for="open-menu" class="header_open-nav-button" role="button">=</label>
-
-        <div class="header_logo-container">
-            <img class="header_logo" src="./img/logo.png" alt="logo">
+    <!-- Barra lateral de Navegacion -->
+    <aside class="sidebar">
+        <div class="sidebar_form">
+            <input type="checkbox" id="open-menu">
+            <label for="open-menu" class="material-symbols-outlined">clear_all</label>
         </div>
 
-        <nav class="header_nav">
-            <ul class="header_nav-list">
-                <li class="header_nav-item"><a href="#">About</a></li>
-                <li class="header_nav-item"><a href="#">Portafolio</a></li>
-                <li class="header_nav-item"><a href="#">Contact</a></li>
+        <!-- logo de gym barra lateral -->
+        <picture class="sidebar_picture">
+            <img src="./img/logo.png" alt="imagen de logotipo">
+        </picture>
+
+        <!-- Menu de Navbar -->
+        <nav class="sidebar_nav">
+            <ul class="sidebar_ul-list">
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">home</span>
+                    <a href="#">Inicio</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">info</span>
+                    <a href="./pages/nosotros.html">Nosotros</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">apps</span>
+                    <a href="./pages/programas.html">Programas</a>
+                </li>
+
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <a href="./pages/productos.html">Productos</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">forum</span>
+                    <a href="./pages/contactos.html">Contactos</a>
+                </li>
             </ul>
         </nav>
 
-    </header>
+        <!-- Profile de Barra lateral -->
+        <div class="sidebar_profile">
+            <ul class="sidebar_ul-profile">
+                <li class="sidebar_profile-item item--profile">
+                    <img src="./img/logo.png" alt="imagen de logotipo">
+                    <span class="span-profile">Mi Cuenta</span>
+                </li>
 
-    <main class="profile">
-    
-        <div class="profile_wrapper">
+                <li class="sidebar_profile-item">
+                    <span class="material-symbols-outlined">logout</span>
+                    <a href="">Inicio Seccion</a>
+                </li>
+            </ul>
+        </div>
 
-            <div class="img_container">
-                <img class="profile_img" src="./img/presentacion.jpg" alt="imagen principal">
-            </div>
 
-            <div class="profile_data-container">
+    </aside>
 
-                <div class="profile_data">
 
-                    <div class="profile_description">
-                        <h1>Gym Fitnes</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui architecto eveniet vero distinctio
-                            consequatur dolore esse! Est laborum voluptatem ullam voluptates, natus aspernatur amet, itaque
-                            nihil magni explicabo, rerum asperiores?
-                        </p>
-                    </div>
-    
-                    <div class="profile_skills-container">
-                        <h2> SKILLS</h2>
-                        <Ul class="container_ul">
-                            <li class="profile_skill">
-                                <div class="load-bar">
-                                    <div class="load-bar_bar bar--80 ">80%</div>
-                                </div>
-                                <span class="profile_skill-name">HTML</span>
-                            </li>
-    
-                            <li class="profile_skill">
-                                <div class="load-bar">
-                                    <div class="load-bar_bar bar--60 ">60%</div>
-                                </div>
-                                <span class="profile_skill-name">CSS</span>
-                            </li>
-    
-                            <li class="profile_skill">
-                                <div class="load-bar">
-                                    <div class="load-bar_bar bar--70 ">70%</div>
-                                </div>
-                                <span class="profile_skill-name">JS</span>
-                            </li>
-    
-                            <li class="profile_skill">
-                                <div class="load-bar">
-                                    <div class="load-bar_bar bar--95 ">95%</div>
-                                </div>
-                                <span class="profile_skill-name">SQL</span>
-                            </li>
-                        </Ul>
-                    </div>
 
+    <!-- main principal -->
+    <main>
+        <!-- titulo pricipal -->
+        <h1>SHIFT Fitness</h1>
+
+        <!-- seccion de img carrusel principal -->
+        <div class="container-principal">
+
+            <div class="container_item">
+
+
+                <div class="container_img-item">
+                    <img src="./img/presentacion.jpg" class="img" alt="imagen principal salon">
+                </div>
+
+                <div class="container_img-item">
+                    <img src="./img/spining.jpg" class="img" alt="imagen principal sppining">
+                </div>
+
+                <div class="container_img-item">
+                    <img src="./img/classes.jpg" class="img" alt="imagen principal Aerobic">
                 </div>
 
             </div>
 
         </div>
-    
+
+        <!-- seccion de algunos programas principales   -->
+        <section class="container_programas-fitnes">
+            <ul class="programas-fitnes">
+                <li class="item-programas box-1">><a class="link_programas-fitnes"
+                        href="./pages/productos.html">Indumentaria</a></li>
+                <li class="item-programas box-2"><a class="link_programas-fitnes"
+                        href="./pages/productos.html">Suplementos</a></li>
+                <li class="item-programas box-3"><a class="link_programas-fitnes" href="./pages/programas.html">Fight
+                        Club</a></li>
+                <li class="item-programas box-4"><a class="link_programas-fitnes"
+                        href="./pages/programas.html">Clases</a></li>
+            </ul>
+
+        </section>
+
+        <!-- Seccion Planes -->
+        <section class="seccion_planes">
+
+            <h2>Planes y Descuentos </h2>
+
+            <div class="container_planes">
+                <div class="box_planes-item">
+                    <h3>Plan Básico</h3>
+                    <p>
+                        Acceso al gimnasio de lunes a viernes en horario comercial.
+                        Ideal para quienes buscan comenzar a entrenar y mejorar su condición física.
+                    </p>
+                    <ul>
+                        <li>Acceso a sala de musculación</li>
+                        <li>Uso de máquinas y peso libre</li>
+                        <li>Vestuarios incluidos</li>
+                        <li>Rutina inicial personalizada</li>
+                    </ul>
+
+                    <p><strong>10% de descuento</strong> en la inscripción.</p>
+
+                    <a href="#">Elegir Plan</a>
+                </div>
+                <div class="box_planes-item">
+                    <h3>Plan Premium</h3>
+                    <p>
+                        Acceso ilimitado al gimnasio, clases grupales y asesoramiento
+                        personalizado para alcanzar tus objetivos más rápido.
+                    </p>
+
+                    <ul>
+                        <li>Acceso ilimitado al gimnasio</li>
+                        <li>Clases grupales incluidas</li>
+                        <li>Rutinas actualizadas mensualmente</li>
+                        <li>Asesoramiento de entrenadores</li>
+                        <li>Vestuarios y lockers</li>
+                    </ul>
+
+                    <p><strong>20% de descuento</strong> durante los primeros 3 meses.</p>
+
+                    <a href="#">Elegir Plan</a>
+                </div>
+                <div class="box_planes-item">
+                    <h3>Plan Elite</h3>
+                    <p>
+                        La experiencia más completa. Incluye acceso total, seguimiento
+                        nutricional, entrenador personal y beneficios exclusivos.
+                    </p>
+
+                    <ul>
+                        <li>Todos los beneficios Premium</li>
+                        <li>Entrenador personal</li>
+                        <li>Plan nutricional personalizado</li>
+                        <li>Acceso prioritario a actividades</li>
+                        <li>Seguimiento de progreso mensual</li>
+                        <li>Beneficios y promociones exclusivas</li>
+                    </ul>
+                    <p><strong>30% de descuento</strong> en la inscripción y regalo de bienvenida.</p>
+
+                    <a href="#">Elegir Plan</a>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <div class="" >
-            <ul class="">
-                <li class="header_nav-item"><a href="#">About</a></li>
-                <li class="header_nav-item"><a href="#">Portafolio</a></li>
-                <li class="header_nav-item"><a href="#">Contact</a></li>
-            </ul>
+
+    <!-- Footer -->
+    <footer class="section_footer">
+        <div class="container_footer">
+            <div class="box_footer-item">
+                <img class="img_footer img--logo" src="./img/logo.png" alt="Imagen de logotipo">
+                <p>Av. Pellegrini 2058, Rosario</p>
+                <p>+54 3416286984</p>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Entrená</h3>
+                <ul class="ul_footer">
+                    <!-- falta ruta para cada programa para suscribirse con los info -->
+                    <li><a href="#">Aerobic</a></li>
+                    <li><a href="#">Boxeo</a></li>
+                    <li><a href="#">Musculación</a></li>
+                    <li><a href="#">Karate</a></li>
+                    <li><a href="#">Spinning</a></li>
+                </ul>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Descubrí</h3>
+                <ul class="ul_footer">
+                    <li><a href="./pages/productos.html">Indumentaria</a></li>
+                    <li><a href="./pages/productos.html">Suplementos</a></li>
+                    <li><a href="./pages/productos.html">Pesas</a></li>
+                </ul>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Seguinos</h3>
+                <!-- falta ruta para los iconos de redes sociales -->
+                <a href="#"><img class="img_footer" src="./img/instagram.png" alt="logo de instagram"></img></a>
+                <a href="#"><img class="img_footer" src="./img/facebook.png" alt="logo de facebook"></img> </a>
+                <a href="#"><img class="img_footer" src="./img/youtube.png" alt="logo de youtube"> </img></a>
+            </div>
         </div>
+
+        <div class="box_footer-item">
+            <a href="#"><img class="img_footer img--absolute" src="./img/whasap.png" alt="logo de whatsapp"></img></a>
+        </div>
+
+        <div class="box_footer-item item--p">
+            <p>&copy; 2026 PowerFit Gym | Fitness • Salud • Rendimiento</p>
+        </div>
+
     </footer>
 
-
 </body>
+
 </html>

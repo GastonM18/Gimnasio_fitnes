@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM FITNES</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="../styles.css">
+
+
+</head>
+
+<body>
+    <!-- Barra lateral de Navegacion -->
+    <aside class="sidebar">
+        <div class="sidebar_form">
+            <input type="checkbox" id="open-menu">
+            <label for="open-menu" class="material-symbols-outlined">clear_all</label>
+        </div>
+
+        <!-- logo de gym barra lateral -->
+        <picture class="sidebar_picture">
+            <img src="../img/logo.png" alt="imagen de logotipo">
+        </picture>
+
+        <!-- Menu de Navbar -->
+        <nav class="sidebar_nav">
+            <ul class="sidebar_ul-list">
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">home</span>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">info</span>
+                    <a href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">apps</span>
+                    <a href="./programas.html">Programas</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <a href="./productos.html">Productos</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">forum</span>
+                    <a href="#">Contactos</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Profile de Barra lateral -->
+        <div class="sidebar_profile">
+            <ul class="sidebar_ul-profile">
+                <li class="sidebar_profile-item item--profile">
+                    <img src="../img/logo.png" alt="imagen logotipo gym">
+                    <span class="span-profile">Mi Cuenta</span>
+                </li>
+
+                <li class="sidebar_profile-item">
+                    <span class="material-symbols-outlined">logout</span>
+                    <a href="">Inicio Seccion</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </aside>
+
+    <!-- main principal -->
+    <main>
+        <section class="section_form">
+            <div class="container_form-redes">
+
+                <aside class="info_redes">
+
+                    <h2>Suscribete a nuestra sede</h2>
+                    <p>
+                        Unite a nuestra comunidad fitness y llevá tu entrenamiento al siguiente nivel.
+                        Espacios modernos, energía única y todo lo que necesitás para superarte cada día.
+                    </p>
+
+                    <p>Av. Pellegrini 2450, Rosario, Santa Fe</p>
+                    <p>Lunes a Viernes: 07:00 hs a 22:00 hs</p>
+                    <p>Sábados: 09:00 hs a 17:00 hs</p>
+                    <p>contacto.fitzonegym@gmail.com</p>
+
+                    <h3>Siganos</h3>
+
+                    <div class="redes">
+                        <a href="#"><img src="../img/youtube.png" alt="Logo de youtube"></img></a>
+                        <a href="#"><img src="../img/instagram.png" alt="logo de instagram"></img></a>
+                        <a href="#"><img src="../img/facebook.png" alt="logo de facebook"></img></a>
+                    </div>
+                </aside>
+
+                <form class="form">
+                    <h2>Contactanos</h2>
+                    <label for="Nombre"> Nombre Completo</label>
+                    <input type="text" placeholder="Gaston Monasterio" id="Nombre">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="ejemplo@gmail.com" id="email">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="" id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+                    <input class="submit" type="submit">
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="section_footer">
+        <div class="container_footer">
+            <div class="box_footer-item">
+                <img class="img_footer img--logo" src="../img/logo.png" alt="imagen de logotipo gym">
+                <p>Av. Pellegrini 2450, Rosario, Santa Fe</p>
+                <p>+54 3416286984</p>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Entrená</h3>
+                <ul class="ul_footer">
+                    <!-- falta ruta para cada programa para suscribirse con los info -->
+                    <li><a href="#">Aerobic</a></li>
+                    <li><a href="#">Boxeo</a></li>
+                    <li><a href="#">Musculación</a></li>
+                    <li><a href="#">Karate</a></li>
+                    <li><a href="#">Spinning</a></li>
+                </ul>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Descubrí</h3>
+                <ul class="ul_footer">
+                    <li><a href="../pages/productos.html">Indumentaria</a></li>
+                    <li><a href="../pages/productos.html">Suplementos</a></li>
+                    <li><a href="../pages/productos.html">Pesas</a></li>
+                </ul>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Seguinos</h3>
+                <!-- falta ruta para los iconos de redes sociales -->
+                <a href="#"><img class="img_footer" src="../img/instagram.png" alt="logo de instagram"></img></a>
+                <a href="#"><img class="img_footer" src="../img/facebook.png" alt="logo de facebook"></img> </a>
+                <a href="#"><img class="img_footer" src="../img/youtube.png" alt="logo de youtube"> </img></a>
+            </div>
+        </div>
+
+        <div class="box_footer-item">
+            <!-- falta ruta para link externo de whatsapp -->
+            <a href="#"><img class="img_footer img--absolute" src="../img/whasap.png" alt="logo de whatsapp"></img></a>
+        </div>
+
+        <div class="box_footer-item item--p">
+            <p>&copy; 2026 PowerFit Gym | Fitness • Salud • Rendimiento</p>
+        </div>
+
+    </footer>

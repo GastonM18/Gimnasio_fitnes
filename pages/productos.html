@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM FITNES</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="../styles.css">
+
+
+</head>
+
+<body>
+    <!-- Barra lateral de Navegacion -->
+    <aside class="sidebar">
+        <div class="sidebar_form">
+            <input type="checkbox" id="open-menu">
+            <label for="open-menu" class="material-symbols-outlined">clear_all</label>
+        </div>
+
+        <!-- logo de gym barra lateral -->
+        <picture class="sidebar_picture">
+            <img src="../img/logo.png" alt="imagen de logotipo">
+        </picture>
+
+        <!-- Menu de Navbar -->
+        <nav class="sidebar_nav">
+            <ul class="sidebar_ul-list">
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">home</span>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">info</span>
+                    <a href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">apps</span>
+                    <a href="./programas.html">Programas</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <a href="#">Productos</a>
+                </li>
+                <li class="sidebar_ul-item">
+                    <span class="material-symbols-outlined">forum</span>
+                    <a href="./contactos.html">Contactos</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Profile de Barra lateral -->
+        <section class="sidebar_profile">
+            <ul class="sidebar_ul-profile">
+                <li class="sidebar_profile-item item--profile">
+                    <img src="../img/logo.png" alt="imagen de logotipo del gym">
+                    <span class="span-profile">Mi Cuenta</span>
+                </li>
+
+                <li class="sidebar_profile-item">
+                    <span class="material-symbols-outlined">logout</span>
+                    <a href="">Inicio Seccion</a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+
+
+    <main>
+        <header class="container_header">
+            <div class="header_search">
+                <form class="form_search" role="search">
+                    <input type="search" name="q" placeholder="Buscar productos" aria-label="Buscar productos">
+                    <button type="submit" class="button_search search--productos"><span
+                            class="material-symbols-outlined">search</span></button>
+
+                    <button type="button" class="button_search cart--shopping "> <span
+                            class="material-symbols-outlined">shopping_cart</span> </button>
+                </form>
+            </div>
+        </header>
+
+        <section class="seccion_productos">
+
+            <div class="productos_item">
+                <img src="../img/producto_001.jpg" alt="imagen de remera" class="img_productos">
+                <a href="#" class="description_productos">Remera Hombre Deportiva</a>
+                <p class="valor_productos">$18.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">400+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+
+            <div class="productos_item">
+                <img src="../img/producto_002.jpg" alt="imagen de suplemento" class="img_productos">
+                <a href="#" class="description_productos">Pre entreno</a>
+                <p class="valor_productos">$22.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">20+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_003.jpg" alt="imagen de short" class="img_productos">
+                <a href="#" class="description_productos">Short Hombre Deportivo</a>
+                <p class="valor_productos">$21.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">10+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_004.jpg" alt="Imagen de remera" class="img_productos">
+                <a href="#" class="description_productos">Remera Dama Deportiva</a>
+                <p class="valor_productos">$19.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">400+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_005.jpg" alt="imagen de kit de Indumentaria deportiva" class="img_productos">
+                <a href="#" class="description_productos">Kit Gym</a>
+                <p class="valor_productos">$49.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">8+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_006.jpg" alt="imagen de kit de pesas" class="img_productos">
+                <a href="#" class="description_productos">Kit Musculacion</a>
+                <p class="valor_productos">$70.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">80+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_007.jpg" alt="imagen de campera dama deportiva" class="img_productos">
+                <a href="#" class="description_productos">Campera Dama Deportiva</a>
+                <p class="valor_productos">$45.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">25+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_008.jpg" alt="imagen de Conjunto Deportivo" class="img_productos">
+                <a href="#" class="description_productos">Conjunto Deportivo</a>
+                <p class="valor_productos">$108.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">5+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_009.jpg" alt="imagen de Campera Deportiva Dama" class="img_productos">
+                <a href="#" class="description_productos">Campera Deportiva Dama</a>
+                <p class="valor_productos">$40.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">2+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_010.jpg" alt="imagen de Short Hombre" class="img_productos">
+                <a href="#" class="description_productos">Short Hombre</a>
+                <p class="valor_productos">$15.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">40+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_011.jpg" alt="imagen de kit gym" class="img_productos">
+                <a href="#" class="description_productos">kit gym</a>
+                <p class="valor_productos">$70.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">7+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_012.jpg" alt="imagen de Campera mujer" class="img_productos">
+                <a href="#" class="description_productos">Campera mujer</a>
+                <p class="valor_productos">$36.400,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">2+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_013.jpg" alt="imagen de Remera Hombre Deportiva" class="img_productos">
+                <a href="#" class="description_productos">Remera Hombre Deportiva</a>
+                <p class="valor_productos">$16.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">40+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_014.jpg" alt="imagen de suplemento" class="img_productos">
+                <a href="#" class="description_productos">Meta Beef Pre entreno</a>
+                <p class="valor_productos">$20.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">32+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_015.jpg" alt="imagen de Mancuernas 25kg" class="img_productos">
+                <a href="#" class="description_productos">Mancuernas 25kg</a>
+                <p class="valor_productos">$45.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">17+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_016.jpg" alt="imagen de Campera Hombre Negra" class="img_productos">
+                <a href="#" class="description_productos">Campera Hombre Negra</a>
+                <p class="valor_productos">$105.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">6+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_017.jpg" alt="imagen de Remera Unisex Deportiva" class="img_productos">
+                <a href="#" class="description_productos">Remera Unisex Deportiva</a>
+                <p class="valor_productos">$15.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">33+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_018.jpg" alt="imagen de Short Negro Hombre" class="img_productos">
+                <a href="#" class="description_productos">Short Negro Hombre</a>
+                <p class="valor_productos">$20.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">100+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_019.jpg" alt="imagen de Remera Unisex" class="img_productos">
+                <a href="#" class="description_productos">Remera Unisex</a>
+                <p class="valor_productos">$18.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">2+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_020.jpg" alt="imagen de Short Hombre" class="img_productos">
+                <a href="#" class="description_productos">Short Hombre</a>
+                <p class="valor_productos">$22.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">16+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_021.jpg" alt="imagen de suplemento" class="img_productos">
+                <a href="#" class="description_productos">Creatina Get</a>
+                <p class="valor_productos">$40.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">62+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_022.jpg" alt="imagen de Remera gris Hombre" class="img_productos">
+                <a href="#" class="description_productos">Remera gris Hombre</a>
+                <p class="valor_productos">$17.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">10+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_023.jpg" alt="imagen de Conjunto Hombre" class="img_productos">
+                <a href="#" class="description_productos">Conjunto Hombre</a>
+                <p class="valor_productos">$105.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">11+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_024.jpg" alt="imagen de conjunto Deportivo" class="img_productos">
+                <a href="#" class="description_productos">conjunto Deportivo</a>
+                <p class="valor_productos">$50.000,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">20+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_025.jpg" alt="imagen de Pesas 5kg" class="img_productos">
+                <a href="#" class="description_productos">Pesas 5kg</a>
+                <p class="valor_productos">$20.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">300+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_026.jpg" alt="imagen de suplemento" class="img_productos">
+                <a href="#" class="description_productos">Creatina Nutricost</a>
+                <p class="valor_productos">$31.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">252+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_027.jpg" alt="imagen de Remera Dama Deportiva" class="img_productos">
+                <a href="#" class="description_productos">Remera Dama Deportiva</a>
+                <p class="valor_productos">$25.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">27+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_028.jpg" alt="imagen de Buso Deportivo Hombre" class="img_productos">
+                <a href="#" class="description_productos">Buso Deportivo Hombre</a>
+                <p class="valor_productos">$27.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">17+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_029.jpg" alt=" imagen de Campera Mujer" class="img_productos">
+                <a href="#" class="description_productos">Campera Mujer</a>
+                <p class="valor_productos">$50.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">5+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+            <div class="productos_item">
+                <img src="../img/producto_030.jpg" alt="imagen de Remera Deportiva Licra" class="img_productos">
+                <a href="#" class="description_productos">Remera Deportiva Licra</a>
+                <p class="valor_productos">$16.500,00</p>
+                <div class="container_vendidos-icon-cart">
+                    <p class="cantidad_vendidas">18+ Vendidos</p>
+                    <button type="button" class="button-cart"><span
+                            class="material-symbols-outlined icon-cart">shopping_cart </button> </span>
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="section_footer">
+        <div class="container_footer">
+            <div class="box_footer-item">
+                <img class="img_footer img--logo" src="../img/logo.png" alt="imagen de logotipo gym">
+                <p>Av. Pellegrini 2058, Rosario</p>
+                <p>+54 3416286984</p>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Entrená</h3>
+                <ul class="ul_footer">
+                    <!-- falta ruta para cada programa para suscribirse con los info -->
+                    <li><a href="#">Aerobic</a></li>
+                    <li><a href="#">Boxeo</a></li>
+                    <li><a href="#">Musculación</a></li>
+                    <li><a href="#">Karate</a></li>
+                    <li><a href="#">Spinning</a></li>
+                </ul>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Descubrí</h3>
+                <ul class="ul_footer">
+                    <li><a href="../pages/productos.html">Indumentaria</a></li>
+                    <li><a href="../pages/productos.html">Suplementos</a></li>
+                    <li><a href="../pages/productos.html">Pesas</a></li>
+                </ul>
+            </div>
+
+            <div class="box_footer-item">
+                <h3>Seguinos</h3>
+                <!-- falta rutas hacia las redes -->
+                <a href="#"><img class="img_footer" src="../img/instagram.png" alt="logo de instagram"></img></a>
+                <a href="#"><img class="img_footer" src="../img/facebook.png" alt="logo de facebook"></img> </a>
+                <a href="#"><img class="img_footer" src="../img/youtube.png" alt="logo de youtube"> </img></a>
+            </div>
+        </div>
+
+        <div class="box_footer-item">
+            <a href="#"><img class="img_footer img--absolute" src="../img/whasap.png" alt="logo de whatsapp"></img></a>
+        </div>
+
+        <div class="box_footer-item item--p">
+            <p>&copy; 2026 PowerFit Gym | Fitness • Salud • Rendimiento</p>
+        </div>
+
+    </footer>
+
+</body>
