@@ -1,0 +1,1227 @@
+
+
+// variables
+// Backgroun  Principales
+$bg-primary: #0F0F0F;
+$bg-secondary: #1A1A1A;
+$card-bg: #242424;
+$bg-tercery:#eee;
+// textos 
+$text-primary: #FFFFFF;
+$text-secondary: #B3B3B3;
+// Botones
+$accent: #FF6B00;
+$accent-hover: #FF8533;
+$border: #333333;
+// fuentes
+$font: 'Poppins', sans-serif;
+
+
+// ------- Mixins-------------
+
+@mixin flex-base($direction, $justify, $align){
+    display: flex;
+    @if $direction != null {
+    flex-direction: $direction;
+    }
+    @if $justify != null {
+    justify-content: $justify;
+    }
+    @if $align != null {
+    align-items: $align;
+    }
+}
+
+@mixin box-model{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    font-family: $font;
+}
+
+
+/* Margin lateral del main general en la apertura de la barra de navbar  */
+main, .section_footer{
+    margin-left: clamp(230px, 20vw, 300px);
+    transition: margin-left .3s ease;
+    
+}
+
+body:has(.sidebar input:checked) main, body:has(.sidebar input:checked) .section_footer {
+    margin-left: 80px;
+}
+
+/* Container padre Open Menu de barra lateral  */
+.sidebar{
+    background: $bg-tercery;
+    position: fixed;
+    left: 0;
+    height: 100dvh;
+    @include flex-base(column, space-between, null);
+    max-width: 100%;
+    width: clamp(230px, 20vw, 300px);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    padding: 30px 0 30px 6px;
+    z-index: 100;
+    transition: width .3s ease;
+}
+
+.sidebar:has(input[type="checkbox"]:checked){
+    width: fit-content;
+}
+
+    .sidebar_form{
+    position: absolute;
+    right: 1rem;
+    z-index: 10;
+}
+
+    .sidebar_picture{
+    margin: auto;
+}
+.sidebar_picture img{
+    width: clamp(4rem, 65% , 18rem);
+    margin: auto;
+    }
+
+
+/* Icon Open/close barra lateral (checkbox) */
+
+    .sidebar label{
+    background-color: $card-bg;
+    color: $bg-tercery;
+    border-radius: 50%;
+    padding: .4rem;
+    }
+
+    input[type="checkbox"]{
+    display: none;
+    }
+
+
+/* Pseudo clases para ajustar el contenido de la barra lateral */
+
+.sidebar:has(input[type="checkbox"]:checked) picture {
+    display: none;
+    width: fit-content;
+    margin-left: .75rem;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) :is(.sidebar_ul-item a, .sidebar_profile-item a, .span-profile){
+    display: none;
+}
+
+
+/* Navbar */
+.sidebar_nav{
+    flex: 1;
+    display: flex;
+}
+.sidebar_ul-list{
+    @include flex-base( column, center, null);
+    width: 100%;
+}
+
+.sidebar_ul-item span{
+    padding: 12px;
+    font-size: 1.5rem;
+}
+.sidebar_ul-item{
+    list-style: none;
+    @include flex-base( null, null, center);
+    gap: 5px;
+    text-transform: uppercase;
+    font-size: .7rem;
+    padding-right: 6px;
+}
+
+.sidebar_ul-item:hover{
+    background-color: $card-bg;
+    color: $bg-tercery;
+    border-radius: 36px 0 0 36px;
+}
+
+.sidebar_ul-list a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*  Perfil de barra lateral */
+
+.sidebar_profile{
+    margin: 17px;
+}
+.sidebar_profile img{
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.sidebar_profile-item .span-profile{
+    font-size: .8rem;
+    padding: 0px 10px 0 14px;
+}
+
+.sidebar_ul-profile{
+    @include flex-base( column, null, null);
+    gap: 15px;
+}
+
+.sidebar_profile-item {
+list-style: none;
+@include flex-base( null, null, center);
+}
+
+.sidebar_profile-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.item--profile{
+    
+    width: fit-content;
+}
+
+.item--profile:hover{
+    background-color: $card-bg;
+    color: $bg-tercery;
+    border-radius: 36px;
+    
+    
+}
+
+/* Queris de barra lateral sidebar  */
+
+@media screen and (max-width: 500px) {
+
+
+main{
+    margin-left: 0;
+    width: 100%;
+    margin-top: 80px;
+}
+.section_footer{
+    margin-left: 0;
+    width: 100%;
+}
+
+
+body:has(.sidebar input:checked) main{
+    margin-left:0;
+}
+
+.sidebar{
+    top: 0;
+    right: 0;
+    height: auto;
+    flex-direction: row;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+
+    
+}
+
+.sidebar_form{
+    display: block;
+}
+
+.sidebar:has(input[type="checkbox"]:checked){
+    height: 100dvh;
+    width: auto;
+    flex-direction: column;
+
+    .sidebar_nav{
+    flex: 1;
+    display: flex;
+
+}
+    .sidebar_ul-list{
+    @include flex-base(column, center, null);
+    height: 50dvh;
+    margin: auto;
+    width: 100%;
+
+}
+    .sidebar_ul-item{
+        width: 100%;
+    display: flex;
+}
+
+.sidebar_ul-item a{
+    @include flex-base( null, center, center);
+
+}
+
+.sidebar_ul-item:hover{
+    border-radius: 5px;
+}
+
+.sidebar_profile{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 20dvh;
+
+}
+
+.item--profile{
+    display: block;
+
+}
+
+
+.sidebar_profile-item{
+    display: flex;
+    gap: 5px;
+    margin-left: 2px;
+    padding: 5px;
+}
+
+.sidebar_ul-profile{
+    @include flex-base( column, null, null);
+    margin-left: 10px;
+
+}
+
+.item--profile{
+    padding: 5px;
+}
+.sidebar_profile-item:hover{
+    border-radius: 5px;
+    background: $border;
+    color: $text-primary;
+}
+
+
+.sidebar_profile-item a {
+display: flex;
+}
+
+.sidebar_profile-item img {
+display: flex;
+}
+
+.sidebar_profile-item span {
+display: flex;
+}
+
+
+}
+
+
+
+.sidebar_picture{
+    display: block;
+    margin-left: 15px;
+}
+
+.sidebar_picture img{
+    width: 70px;
+}
+
+.sidebar_nav{
+    display: none;
+
+
+}
+
+.sidebar_profile{
+    display: none;
+
+}
+
+}
+
+/* Queris ends de barra lateral sidebar  */
+
+
+
+/*------- MAIN ----------*/
+
+
+main {
+min-height: 100dvh;
+}
+
+/* seccion de index container principal */
+
+.container-principal {
+    max-width: 1100px;
+    height: 65dvh ;
+    margin: auto;
+    margin-top: 10px;
+    overflow: hidden;
+    box-shadow: -3px 6px 13px 1px rgba(122,119,119,0.76);
+    -webkit-box-shadow: -3px 6px 13px 1px rgba(122,119,119,0.76);
+    -moz-box-shadow: -3px 6px 13px 1px rgba(122,119,119,0.76);
+    border-radius: 10px;
+
+}
+
+.container_item{
+    display: flex;
+    @include box-model;
+    animation: slide 10s infinite alternate ease-in-out;
+    border-radius: 10px;
+
+}
+
+.container_img-item{
+    @include box-model;
+    flex-shrink: 0;
+    border-radius: 10px;
+
+}
+
+
+.container_img-item .img{
+    @include box-model;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+@keyframes slide{
+    0%{
+        margin-left: 0;
+    }
+    30%{
+        margin-left: 0;
+    }
+
+    35%{
+        margin-left: -100%;
+    }
+
+    65%{
+        margin-left: -100%;
+    }
+
+    70%{
+        margin-left: -200%;
+    }
+
+    100%{
+        margin-left: -200%;
+    }
+
+
+}
+
+
+h1{
+
+background-color: $card-bg;
+color: $text-primary;
+padding: 2px;
+text-align: center;
+font-family: sans-serif;
+font-style: italic;
+font-weight: 900;
+font-size: 30px;
+}
+
+
+/* seccion de algunos Programas principales */
+
+.container_programas-fitnes{
+    max-width: 1100px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+.programas-fitnes{
+    @include flex-base( null, space-between, null);
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.item-programas{
+list-style: none;
+min-width: 140px;
+height: 140px;
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0;
+border-radius: 10px;
+box-shadow: -3px 6px 13px 1px rgba(122,119,119,0.76); -webkit-box-shadow: -3px 6px 13px 1px rgba(122,119,119,0.76);
+-moz-box-shadow: -3px 6px 13px 1px rgba(122,119,119,0.76);
+background-size: cover;
+background-position: center;
+@include flex-base(column, center, center);
+
+}
+
+.box-1{
+    background-image: url(./img/indumentaria.jpg);
+}
+
+.box-2{
+    background-image: url(./img/Suplementos.jpg);
+}
+
+.box-3{
+    background-image: url(./img/boxeo.jpg);
+}
+
+.box-4{
+    background-image: url(./img/spining.jpg);
+}
+
+
+.item-programas a{
+
+    background: transparent;
+    backdrop-filter: blur(8px);
+    border-radius: 5px;
+    color: #fff;
+    margin: auto;
+    padding: 5px 15px;
+    box-shadow: -11px 4px 19px 0px rgba(255, 255, 255, 0.75);
+-webkit-box-shadow: -11px 4px 19px 0px rgba(255, 255, 255, 0.75);
+-moz-box-shadow: -11px 4px 19px 0px rgba(255, 255, 255, 0.75);
+text-decoration: none;
+border: 1px solid #fff;
+}
+
+.link_programas-fitnes:hover{
+    opacity: 0.8;
+    border: 2px solid #CCFF00;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 1px 27px 4px #CCFF00;
+-webkit-box-shadow: 0px 1px 27px 4px #CCFF00;
+-moz-box-shadow: 0px 1px 27px 4px #CCFF00;
+}
+
+
+/* seccion Planes */
+
+.seccion_planes h2{
+    background: $accent;
+    padding: 20px;
+    color: $text-primary;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.seccion_planes{
+    background-color: $bg-secondary;
+
+}
+.container_planes{
+    max-width: 100%;
+    width: 1100px;
+    min-height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    gap: 20px;
+
+}
+
+.box_planes-item{
+    min-width: 300px;
+    flex: 1;
+    height: 450px;
+    background-color: $border;
+    border-radius: 15px;
+    margin: auto;
+    @include flex-base(column, null, null);
+    border-top: 1px solid $accent-hover;
+}
+
+.box_planes-item h3{
+    padding: 10px;
+    text-align: center;
+    color: $text-secondary;
+    background-color: $card-bg;
+    border-radius: 15px 15px 0 0;
+}
+
+.box_planes-item p{
+    padding: 10px;
+    text-align: center;
+    color: $text-secondary;
+}
+
+.box_planes-item ul{
+    padding: 15px 25px;
+    line-height: 2;
+    
+}
+
+.box_planes-item ul li{
+    color: $text-secondary;
+
+    
+}
+
+.box_planes-item a{
+    text-decoration: none;
+    margin: auto;
+    color:$text-secondary;
+    padding: 5px;
+    background:$bg-secondary;
+    border-radius: 5px;
+}
+
+.box_planes-item a:hover{
+    font-size: 1.2rem;
+    background: $accent-hover;
+    transition: font-size .2s ease, background .2s ease;
+}
+
+/* Section acerca de nosotros */
+
+
+.section_container{
+height: 100dvh;
+background-color: $card-bg;
+container-name: nosotros;
+container-type: inline-size;
+@include flex-base( column, null, null);
+
+}
+.container_acerca-nosotros{
+    max-width: 1100px;
+    width: 90%;
+    @include flex-base( column, null, null);
+    border-radius: 20px;
+    margin-top: 5px;
+    position: relative;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    z-index: 1;
+    padding: 10px;
+    margin: auto;
+
+
+}
+
+.container_acerca-nosotros::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgb(0,183,255),rgb(255,48,255));
+    height: 130%;
+    animation: cirbox 8s linear infinite;
+    transition: all 0.2s linear;
+
+
+}
+
+@keyframes cirbox {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.container_acerca-nosotros::after{
+    content: "";
+    position: absolute;
+    background: $card-bg;
+    inset: 5px;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+
+.container_info-nosotros {
+
+    padding: 20px;
+    margin: auto;
+    max-width: 80%; 
+    z-index: 10;
+    
+
+}
+
+.video{
+    max-width: 100%;
+    width: 100%;
+    border-radius: 88px 0px 84px 31px;
+    -webkit-border-radius: 88px 0px 84px 31px;
+    -moz-border-radius: 88px 0px 84px 31px;
+    padding: 10px;
+    z-index: 10;
+    @include flex-base( null, center, center);
+}
+
+
+video{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 88px 0px 84px 31px;
+    -webkit-border-radius: 88px 0px 84px 31px;
+    -moz-border-radius: 88px 0px 84px 31px;
+    aspect-ratio: 16/9;
+}
+
+.section_container h2{
+    margin-top: 15px;
+    padding: 8px;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #474a51;
+}
+
+.parrafo{
+color: #fff;
+text-align: center;
+white-space: wrap;
+font-size: 15px;
+line-height: 1.5;
+
+}
+
+/* section acerca de nosotros ends */
+
+
+/* section  nuestros programas */
+
+.container_galeria{
+    min-height: 100dvh;
+    max-width: 1100px;
+    margin: auto;
+    align-content: center;
+    container-name: galeria;
+    container-type: inline-size;
+}
+
+
+.galeria{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    padding: 15px;
+    gap: 15px;
+    align-content: space-evenly;
+
+}
+
+.item_box{
+    max-width: 100%;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    
+}
+
+
+.item_box a{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    background: linear-gradient(
+        to right,
+        transparent,
+        white,
+        white,
+        transparent
+    );
+    padding: 3px;
+}
+
+
+
+
+.item_box::before{
+    content: "";
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ff4d6d,
+        white,
+        transparent
+    );
+    position: absolute;
+    top: 0;
+    left: 20px;
+    border-radius: 10px 10px 0 0 ;
+    z-index: 2;
+    animation: tictac 2s linear infinite;
+
+
+}
+
+@keyframes tictac{
+    from{
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ff4d6d,
+        white,
+        transparent
+    );
+    }
+
+    to{
+    background: linear-gradient(
+        to left,
+        transparent,
+        #ff4d6d,
+        white,
+        transparent
+    );
+    }
+
+}
+
+
+
+
+.img_box-galeria{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+
+/* contaienr queris de section  nuestros programas  */
+
+@container galeria (min-width: 650px) {
+
+    .galeria{
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 200px); 
+    }
+
+    .box-8 {
+    grid-column: span 2;
+
+}
+
+}
+
+
+@container galeria (min-width: 750px) {
+
+    .galeria{
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 250px); 
+    }
+
+    .box-8 {
+    grid-column: inherit;
+
+}
+}
+
+
+
+
+/* section  nuestros programas ends */
+
+
+/* Seccion Productos */
+
+.container_header{ 
+    background-color: $bg-primary;
+}
+
+.header_search{
+    background-color: $bg-primary;
+    padding: 15px;
+    position: relative;
+    width: 450px;
+    margin: auto;
+}
+
+.form_search{
+    margin: auto;
+    border: none;
+    @include flex-base( null, space-between, null);
+
+}
+
+.form_search input{
+    width: 300px;
+    padding: 8px 40px 8px 12px;
+    border-radius: 15px;
+    border: 1px solid $accent;
+    background-color: transparent;
+    color: $text-primary;
+}
+
+.button_search{
+    padding: 5px;
+    border: 1px solid $accent;
+    border-radius: 5px;
+    background: transparent;
+    color: $text-secondary;
+}
+
+.search--productos{
+    border: none;
+    position: absolute;
+    right: 140px;
+}
+
+.seccion_productos{
+    max-width: 1100px ;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-rows: repeat(auto-fill, 280px);
+    grid-auto-rows: 280px;
+    padding: 20px;
+    gap: 20px;
+    margin: auto;
+
+
+}
+
+.productos_item {
+    overflow: hidden;
+    @include flex-base( column, null, null);
+    border-radius: 10px;
+    background: linear-gradient(
+    135deg,
+    rgba(250, 240, 220, 0.75),
+    rgba(220, 195, 160, 0.9));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.376);
+    position: relative;
+}
+
+.img_productos{
+    max-width: 100%;
+    width: 100%;
+    max-height: 60%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.img_productos:active{
+    position: absolute;
+    max-height: 100%;
+    height: 100%;
+}
+
+.valor_productos{
+font-weight: bold;
+padding: 2px;
+margin-left: 5px;
+}
+
+.cantidad_vendidas{
+font-size: .8rem;
+}
+
+
+.description_productos{
+    text-decoration: none;
+    padding: 3px;
+    margin-left: 5px;
+    color: inherit;
+}
+
+.container_vendidos-icon-cart{
+    @include flex-base( null, space-between, center);
+    padding: 8px;
+
+
+}
+
+.button-cart{
+background: transparent;
+border: none;
+}
+
+.button-cart:hover{
+background: $accent-hover;
+color: $text-secondary;
+border-radius: 5px;
+}
+
+.icon-cart{
+    font-size: 1.5rem;
+    border: 1px solid $bg-primary;
+    border-radius: 5px;
+    padding: 2px;
+}
+.icon-cart:hover{
+    font-size: 1.7rem;
+    transition: font-size .2s ease;
+}
+
+/* seccion formulario /redes */
+
+.section_form{
+    min-height: 100dvh;
+    container-name: form; 
+    container-type: inline-size ;
+    background: linear-gradient(
+    135deg,
+    #161616 0%,
+    #252525 25%,
+    #3b4252 65%,
+    #7c8aa5 100%
+);
+}
+
+
+.container_form-redes{
+    max-width: 100%;
+    width: 1000px;
+    margin: auto;
+    padding: 10px;
+
+
+}
+
+
+.info_redes{
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    min-height: 450px;
+    border-radius: 10px ;
+    border-top: 2px solid #eee;
+
+}
+
+
+
+.info_redes h2{
+    padding: 20px;
+    text-transform: uppercase;
+    text-wrap: balance;
+    color: #eee;
+    
+}
+
+.info_redes p{
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    line-height: 1;
+    text-wrap: pretty;
+    color: #eee;
+}
+
+.info_redes h3{
+    margin-top: 20px;
+    padding: 10px;
+    color: #eee;
+
+}
+
+.redes{
+    max-width: 300px;
+    margin: auto;
+    @include flex-base( null, center, null);
+    gap: 10px;
+    padding: 15px;
+}
+
+.redes img{
+    max-width: 100%;
+    width: 50px;
+    object-fit: cover;
+}
+
+.form{
+    max-width: 400px;
+    margin: auto;
+    border-radius: 15px;
+    background: $card-bg;
+    backdrop-filter: blur(6px);
+    @include flex-base( column, null, null);
+    padding: 15px 20px;
+    gap: 5px;
+    min-height: 400px;
+    position: relative;
+    border-radius: 10px;
+    isolation: isolate;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    box-shadow: 0px 0px 35px #2B2B2B;
+
+
+
+}
+
+.form input, textarea{
+    width: 100%;
+    padding: 10px 4px;
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    color:$text-primary;
+    box-shadow: 0px 0px 5px #eee;
+}
+
+.form h2{
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color:$text-primary;
+}
+
+.form label{
+    margin-top: 10px;
+    line-height: 1;
+    color: $text-primary;
+    
+}
+
+.form textarea{
+    font-family: $font;
+    min-width: 100%;
+    min-height: 100px;
+    resize: none;
+    color: $text-primary;
+}
+
+.submit{
+    max-width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.form input::placeholder{
+    color: $text-secondary;
+}
+
+.form textarea::placeholder{
+    color: $text-secondary;
+}
+
+/* queris section formulario /redes */
+
+@container form (min-width: 750px){
+    
+.container_form-redes{
+    @include flex-base( null, center, null);
+    flex-wrap: wrap;
+}
+
+.info_redes{
+    min-width: 400px;
+    flex: 1 1 0;
+
+}
+
+.form{
+    min-width: 400px;
+    flex: 1 1 0;
+
+}
+
+}
+
+
+/* section formulario /redes ends */
+
+
+
+
+/* footer */
+
+.section_footer{
+    background-color: #2d3a4f;
+    text-align: center;
+    @include flex-base( column, null, null);
+}
+
+.container_footer{
+
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    @include flex-base( null, space-evenly, null);
+}
+
+.box_footer-item{
+    flex: 1;
+}
+.img_footer{
+    max-width: 100%;
+    width: 32px;
+}
+
+.box_footer-item p{
+    padding: 3px;
+    color: $text-secondary;
+    font-size: .9rem;
+}
+
+.ul_footer li{
+    padding: 3px;
+    list-style: none;
+}
+.ul_footer a{
+    text-decoration: none;
+    color: $text-secondary;
+    font-size: .9rem;
+}
+
+.box_footer-item h3{
+    padding: 10px;
+    color: $text-secondary;
+    font-size: 1.5rem;
+}
+
+
+.img--logo{
+    width: 80px;
+    padding: 10px;
+}
+
+.img--absolute {
+    position: fixed;
+    top: 85dvh;
+    left: 90vw;
+    width: 40px;
+}
+
+.item--p{
+    background-color: #3b4252;
+    padding: 20px;
+}
+
+.item--p p{
+    color:$text-primary;
+    font-size: 1rem;
+}
