@@ -1,0 +1,32 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// buscador de productos
+.form_search{
+    margin: auto;
+    border: none;
+    @include flex-base( null, space-between, null);
+}
+
+.form_search input{
+    width: 300px;
+    padding: 8px 40px 8px 12px;
+    border-radius: 15px;
+    border: 1px solid $accent;
+    background-color: transparent;
+    color: $text-primary;
+}
+
+.button_search{
+    padding: 5px;
+    border: 1px solid $accent;
+    border-radius: 5px;
+    background: transparent;
+    color: $text-secondary;
+}
+
+.search--productos{
+    border: none;
+    position: absolute;
+    right: 140px;
+}

@@ -1,0 +1,205 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* Queris de barra lateral sidebar  */
+
+@media screen and (max-width: 500px) {
+
+
+main{
+    margin-left: 0;
+    width: 100%;
+    margin-top: 80px;
+}
+.section_footer{
+    margin-left: 0;
+    width: 100%;
+}
+
+
+body:has(.sidebar input:checked) main{
+    margin-left:0;
+}
+
+.sidebar{
+    top: 0;
+    right: 0;
+    height: auto;
+    flex-direction: row;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+
+    
+}
+
+.sidebar_form{
+    display: block;
+}
+
+.sidebar:has(input[type="checkbox"]:checked){
+    height: 100dvh;
+    width: auto;
+    flex-direction: column;
+
+    .sidebar_nav{
+    flex: 1;
+    display: flex;
+
+}
+    .sidebar_ul-list{
+    @include flex-base(column, center, null);
+    height: 50dvh;
+    margin: auto;
+    width: 100%;
+
+}
+    .sidebar_ul-item{
+        width: 100%;
+    display: flex;
+}
+
+.sidebar_ul-item a{
+    @include flex-base( null, center, center);
+
+}
+
+.sidebar_ul-item:hover{
+    border-radius: 5px;
+}
+
+.sidebar_profile{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 20dvh;
+
+}
+
+.item--profile{
+    display: block;
+
+}
+
+
+.sidebar_profile-item{
+    display: flex;
+    gap: 5px;
+    margin-left: 2px;
+    padding: 5px;
+}
+
+.sidebar_ul-profile{
+    @include flex-base( column, null, null);
+    margin-left: 10px;
+
+}
+
+.item--profile{
+    padding: 5px;
+}
+.sidebar_profile-item:hover{
+    border-radius: 5px;
+    background: $border;
+    color: $text-primary;
+}
+
+
+.sidebar_profile-item a {
+display: flex;
+}
+
+.sidebar_profile-item img {
+display: flex;
+}
+
+.sidebar_profile-item span {
+display: flex;
+}
+}
+
+
+
+.sidebar_picture{
+    display: block;
+    margin-left: 15px;
+}
+
+.sidebar_picture img{
+    width: 70px;
+}
+
+.sidebar_nav{
+    display: none;
+
+
+}
+
+.sidebar_profile{
+    display: none;
+
+}
+
+}
+
+/* Queris ends de barra lateral sidebar  */
+
+
+/* contaienr queris de seccion  nuestros programas  */
+
+@container galeria (min-width: 650px) {
+
+    .galeria{
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 200px); 
+    }
+
+    .box-8 {
+    grid-column: span 2;
+
+}
+
+}
+
+@container galeria (min-width: 750px) {
+
+    .galeria{
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 250px); 
+    }
+
+    .box-8 {
+    grid-column: inherit;
+
+}
+}
+
+/* section  nuestros programas ends */
+
+
+
+/* queris section formulario /redes contacto */
+
+@container form (min-width: 750px){
+    
+.container_form-redes{
+    @include flex-base( null, center, null);
+    flex-wrap: wrap;
+}
+
+.info_redes{
+    min-width: 400px;
+    flex: 1 1 0;
+
+}
+
+.form{
+    min-width: 400px;
+    flex: 1 1 0;
+
+}
+
+}
+
+
+/* section formulario /redes contacto ends */

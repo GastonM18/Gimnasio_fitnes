@@ -1,0 +1,62 @@
+@use "../utilities/variables" as *;
+
+
+body{
+    font-family: $font;
+}
+
+// titulo principal
+h1{
+    background-color: $card-bg;
+    color: $text-primary;
+    padding: 2px;
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+// estilos tipografia seccion nosotros
+.section_container h2{
+    margin-top: 15px;
+    padding: 8px;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #474a51;
+}
+
+.parrafo{
+    color: #fff;
+    text-align: center;
+    white-space: wrap;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+// estilos tipografia formulario contacto
+
+.info_redes h2{
+    padding: 20px;
+    text-transform: uppercase;
+    text-wrap: balance;
+    color: #eee;   
+}
+
+.info_redes p{
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    line-height: 1;
+    text-wrap: pretty;
+    color: #eee;
+}
+
+.info_redes h3{
+    margin-top: 20px;
+    padding: 10px;
+    color: #eee;
+}

@@ -1,0 +1,16 @@
+
+@use "../utilities/variables" as *;
+
+/* Icono Open/close barra navegacion lateral (checkbox) */
+    .sidebar label{
+    background-color: $card-bg;
+    color: $bg-tercery;
+    border-radius: 50%;
+    padding: .4rem;
+    }
+
+    input[type="checkbox"]{
+    display: none;
+    }
+
+    

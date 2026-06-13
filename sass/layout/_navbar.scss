@@ -1,0 +1,122 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* barra de navegacion principal lateral */
+.sidebar{
+    background: $bg-tercery;
+    position: fixed;
+    left: 0;
+    height: 100dvh;
+    @include flex-base(column, space-between, null);
+    max-width: 100%;
+    width: clamp(230px, 20vw, 300px);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    padding: 30px 0 30px 6px;
+    z-index: 100;
+    transition: width .3s ease;
+}
+
+.sidebar:has(input[type="checkbox"]:checked){
+    width: fit-content;
+}
+
+    .sidebar_form{
+    position: absolute;
+    right: 1rem;
+    z-index: 10;
+}
+
+    .sidebar_picture{
+    margin: auto;
+}
+.sidebar_picture img{
+    width: clamp(4rem, 65% , 18rem);
+    margin: auto;
+    }
+
+    /* Pseudo clases para ajustar el contenido de la barra lateral */
+
+.sidebar:has(input[type="checkbox"]:checked) picture {
+    display: none;
+    width: fit-content;
+    margin-left: .75rem;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) :is(.sidebar_ul-item a, .sidebar_profile-item a, .span-profile){
+    display: none;
+}
+
+
+/* Navbar */
+.sidebar_nav{
+    flex: 1;
+    display: flex;
+}
+.sidebar_ul-list{
+    @include flex-base( column, center, null);
+    width: 100%;
+}
+
+.sidebar_ul-item span{
+    padding: 12px;
+    font-size: 1.5rem;
+}
+.sidebar_ul-item{
+    list-style: none;
+    @include flex-base( null, null, center);
+    gap: 5px;
+    text-transform: uppercase;
+    font-size: .7rem;
+    padding-right: 6px;
+}
+
+.sidebar_ul-item:hover{
+    background-color: $card-bg;
+    color: $bg-tercery;
+    border-radius: 36px 0 0 36px;
+}
+
+.sidebar_ul-list a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*  Perfil de barra lateral */
+
+.sidebar_profile{
+    margin: 17px;
+}
+.sidebar_profile img{
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.sidebar_profile-item .span-profile{
+    font-size: .8rem;
+    padding: 0px 10px 0 14px;
+}
+
+.sidebar_ul-profile{
+    @include flex-base( column, null, null);
+    gap: 15px;
+}
+
+.sidebar_profile-item {
+list-style: none;
+@include flex-base( null, null, center);
+}
+
+.sidebar_profile-item a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.item--profile{
+    width: fit-content;
+}
+
+.item--profile:hover{
+    background-color: $card-bg;
+    color: $bg-tercery;
+    border-radius: 36px;
+}

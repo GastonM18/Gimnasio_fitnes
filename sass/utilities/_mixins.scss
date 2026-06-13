@@ -1,0 +1,22 @@
+
+
+// ------- Mixins-------------
+
+@mixin flex-base($direction, $justify, $align){
+    display: flex;
+    @if $direction != null {
+    flex-direction: $direction;
+    }
+    @if $justify != null {
+    justify-content: $justify;
+    }
+    @if $align != null {
+    align-items: $align;
+    }
+}
+
+@mixin box-model{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}

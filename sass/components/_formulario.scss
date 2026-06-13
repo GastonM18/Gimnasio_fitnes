@@ -1,0 +1,68 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// formulario de Contacto
+.form{
+    max-width: 400px;
+    margin: auto;
+    border-radius: 15px;
+    background: $card-bg;
+    backdrop-filter: blur(6px);
+    @include flex-base( column, null, null);
+    padding: 15px 20px;
+    gap: 5px;
+    min-height: 400px;
+    position: relative;
+    border-radius: 10px;
+    isolation: isolate;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    box-shadow: 0px 0px 35px #2B2B2B;
+}
+
+.form input, textarea{
+    width: 100%;
+    padding: 10px 4px;
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    color:$text-primary;
+    box-shadow: 0px 0px 5px #eee;
+}
+
+.form h2{
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color:$text-primary;
+}
+
+.form label{
+    margin-top: 10px;
+    line-height: 1;
+    color: $text-primary;
+    
+}
+
+.form textarea{
+    font-family: $font;
+    min-width: 100%;
+    min-height: 100px;
+    resize: none;
+    color: $text-primary;
+}
+
+.submit{
+    max-width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.form input::placeholder{
+    color: $text-secondary;
+}
+
+.form textarea::placeholder{
+    color: $text-secondary;
+}
